@@ -1,0 +1,31 @@
+-Installation de vagrant et de virtualbox
+-Installer ansible si ansible n'est pas encore installé
+
+-je créé le projet vagrant_ansible
+
+	-je configure les machines avec un réseau respectif
+
+		Ex: # Machine 1 : app1
+		
+	  config.vm.define "app1" do |app1|
+	    app1.vm.hostname = "app1"
+	    app1.vm.network "private_network", ip: "192.168.33.10"
+	    app1.vm.provider "virtualbox" do |vb|
+	      vb.memory = "512"
+	    end
+	  end
+	  
+- je lance vagrant
+- je créé le fichier inventory
+
+-Creation du dossier /etc/ansible
+  -fichier ansible.cfg
+   -ajout des clés SSH
+   
+- playbook Ansible lamp.yml
+
+- je teste mes machines sur un navigateur
+
+- je stop mes machines vagrant
+
+vagrant halt

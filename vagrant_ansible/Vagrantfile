@@ -5,6 +5,8 @@ Vagrant.configure("2") do |config|
   # Utilisation d'une box Ubuntu 18.04 comme base
   config.vm.box = "ubuntu/bionic64"
 
+#definition des machines
+
   # Machine 1: app1
   config.vm.define "app1" do |app1|
     app1.vm.hostname = "app1"
